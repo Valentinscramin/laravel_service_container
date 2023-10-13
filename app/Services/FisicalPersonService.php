@@ -4,11 +4,10 @@ namespace App\Services;
 use App\Interfaces\PersonTypesInterface;
 use App\Models\Person;
 
-class FisicalPersonService implements PersonTypesInterface {
-
-    public function publish(Person $person):void 
+class FisicalPersonService implements PersonTypesInterface
+{
+    public function publish(Person $person): void
     {
-        dd("FISCAL");
+        dd('FISICAL-' . $person->type . ': ' . $person->getDocument());
     }
-
 }

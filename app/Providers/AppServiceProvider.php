@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Interfaces\PersonTypesInterface;
 use App\Services\CompanyPersonService;
+use App\Services\FisicalPersonService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(PersonTypesInterface::class, function () {
             return new CompanyPersonService();
+            // return new FisicalPersonService();
         });
     }
 
